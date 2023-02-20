@@ -1,0 +1,53 @@
+<div >
+    <table>
+        <tr>
+            <td>
+                <div class="Watchlist">
+                    Watchlist <br/>
+                    {{watchlistCount}}
+                </div>    
+            </td>
+            <td>
+                Filter Room 
+                Category
+                
+                    <select #category (change)="getFilterData(category.value)">
+                        <option> AC </option>
+                        <option> Non AC </option>
+                        
+                    </select>
+                   
+            
+            </td>
+            
+        </tr>
+    </table>
+   
+
+
+</div>
+
+
+
+<hr/>
+<div *ngFor="let r of allRoom">
+<table>
+    <tr>
+        <td> <img src="/assets/images/{{r.imageName}}" alt="Room image" width="120px" height="150px"> </td>
+        <td> 
+            <h2>{{r.roomName}} </h2>
+            
+            <hr/>
+            Room Price{{r.price}} 
+            <br/>
+            Room Type {{r.type}}
+            <hr/>
+            <button value="{{r.roomId}}" (click)="goForBuy(room.value)" #room> Enroll Course </button>
+            <button value="{{r.roomId}}" (click)="addWatchlist(room.value)" #room> Add to Watchlist </button>
+                
+            
+        </td>
+        
+    </tr>
+</table>
+</div>

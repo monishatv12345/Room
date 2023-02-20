@@ -1,0 +1,44 @@
+<table>
+    <tr>
+        <td> Enter  Room Id </td>
+        <td> <input type="text" #roomId/> </td>
+    </tr>
+    <tr>
+        <td> Enter  Room Name </td>
+        <td> <input type="text" #roomName/> </td>
+    </tr>
+    <tr>
+        <td> Type </td>
+        <td> <input type="text" #type/> </td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td> 
+            <select #category>
+                <option> AC </option>
+                <option>Non AC </option>
+                
+            </select>
+        </td>
+    </tr>
+    
+    <tr>
+        <td> Price </td>
+        <td> <input type="text" #price/> </td>
+    </tr>
+    
+
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #image/> </td>
+    </tr>
+    <tr>
+        <td> <input type="reset" vaule="Clear All"></td>
+        <td> <input type="button" 
+            (click)="readRoom(roomId.value,roomName.value,type.value,category.value,price.value,image.value)"
+            value="Add Room" /> </td>
+    </tr>
+    
+
+</table>
+<br/>
